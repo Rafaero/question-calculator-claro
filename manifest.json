@@ -1,0 +1,14 @@
+{
+    "name": "Question Calculator",
+    "short_description": "https://rafaero.github.io/claro/",
+    "description": "Question Calculator",
+    "icon": "logo-claro.png",
+    "author": "Keyrus, Rafael Vitor",
+    "init_url": "./",
+    "features": [
+        "pipe-buttons",
+        "card-buttons",
+        "card-badges",
+        "card-tab"
+    ]
+}
