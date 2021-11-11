@@ -1,7 +1,7 @@
 {
     "name": "Question Calculator",
     "short_description": "Question Calculator",
-    "description": "<a target=\"_blank" class=\"btn btn-danger\" href=\"https://rafaero.github.io/question-calculator-claro/\">Acessar</a>\",
+    "description": "<a target=\"_blank\" class=\"btn btn-danger\" href=\"https://rafaero.github.io/question-calculator-claro/\">Acessar</a>\",
     "icon": "logo-claro.png",
     "author": "Keyrus, Rafael Vitor",
     "init_url": "./",
