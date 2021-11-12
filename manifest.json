@@ -7,8 +7,6 @@
     "init_url": "./",
     "features": [
         "pipe-buttons",
-        "card-buttons",
-        "card-badges",
-        "card-tab"
+        "settings-button"
     ]
 }
