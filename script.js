@@ -1,36 +1,39 @@
 function calc(){
     let id = document.getElementById("id").value;
-    let questionOne = document.getElementById("one").value
-    let questionTwo = document.getElementById("two").value
-    let questionThree = document.getElementById("three").value
-    let questionFour = document.getElementById("four").value
-    let questionFive = document.getElementById("five").value
-    let questionSix = document.getElementById("six").value
-    let questionSeven = document.getElementById("seven").value
-    let questionEight = document.getElementById("eight").value
-    let questionNine = document.getElementById("nine").value
-    let questionTen = document.getElementById("ten").value
-    let questionEleven = document.getElementById("eleven").value
 
-    let oneNumber = parseFloat(questionOne)
-    let twoNumber = parseFloat(questionTwo)
-    let threeNumber = parseFloat(questionThree)
-    let fourNumber = parseFloat(questionFour)
-    let fiveNumber = parseFloat(questionFive)
-    let sixNumber = parseFloat(questionSix)
-    let sevenNumber = parseFloat(questionSeven)
-    let eightNumber = parseFloat(questionEight)
-    let nineNumber = parseFloat(questionNine)
-    let tenNumber = parseFloat(questionTen)
-    let elevenNumber = parseFloat(questionEleven)
+    let questionOneNumber = parseFloat(document.getElementById("one").value);
+    let questionTwoNumber = parseFloat(document.getElementById("two").value);
+    let questionThreeNumber = parseFloat(document.getElementById("three").value);
+    let questionFourNumber = parseFloat(document.getElementById("four").value);
+    let questionFiveNumer = parseFloat(document.getElementById("five").value);
+    let questionSixNumber = parseFloat(document.getElementById("six").value);
+    let questionSevenNumber = parseFloat(document.getElementById("seven").value);
+    let questionEightNumber = parseFloat(document.getElementById("eight").value);
+    let questionNineNumber = parseFloat(document.getElementById("nine").value);
+    let questionTenNumber = parseFloat(document.getElementById("ten").value);
+    let questionElevenNumber = parseFloat(document.getElementById("eleven").value);
 
-    let porcetagem = ((oneNumber + twoNumber + threeNumber + fourNumber + fiveNumber + sixNumber + sevenNumber + eightNumber + nineNumber + tenNumber + elevenNumber) / 34.5) * 100;
-    let sum = (oneNumber + twoNumber + threeNumber + fourNumber + fiveNumber + sixNumber + sevenNumber + eightNumber + nineNumber + tenNumber + elevenNumber)
+    let questionOneText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionTwoText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionThreeText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionFourText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionFiveText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionSixText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionSevenText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionEightText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionNineText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionTenText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
+    let questionElevenText = document.getElementById('one').options[document.getElementById('one').selectedIndex].text;
 
-    let resultPorcent = (porcetagem.toFixed(2) + " %")
 
-    if(porcetagem >= 0){
-        document.getElementById("show-porcent").innerHTML = resultPorcent
+    let percent = ((questionOneNumber + questionTwoNumber + questionThreeNumber + questionFourNumber + questionFiveNumer + questionSixNumber + questionSevenNumber + questionEightNumber + questionNineNumber + questionTenNumber + questionElevenNumber) / 34.5) * 100;
+    let resultPercent = (percent.toFixed(2) + " %")
+
+    let sum = (questionOneNumber + questionTwoNumber + questionThreeNumber + questionFourNumber + questionFiveNumer + questionSixNumber + questionSevenNumber + questionEightNumber + questionNineNumber + questionTenNumber + questionElevenNumber);
+
+
+    if(percent >= 0){
+        document.getElementById("show-porcent").innerHTML = resultPercent
 
             const options = {
                 method: 'POST',
@@ -43,7 +46,7 @@ function calc(){
                     updateCardField(input: {
                         card_id: "${id}"
                         field_id: "porcetagem"
-                        new_value: "${resultPorcent}"
+                        new_value: "${resultPercent}"
                     }){clientMutationId}}`})
             };
         
